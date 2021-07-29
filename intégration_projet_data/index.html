@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Langages Dashboard</title>
+</head>
+<body>
+    <header>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#">PHP</a></li>
+			    <li><a class="menu__item" href="#">JS</a></li>
+			    <li><a class="menu__item" href="#">C/C++</a></li>
+			    <li><a class="menu__item" href="#">JAVA</a></li>
+			    <li><a class="menu__item" href="#">PERL</a></li>
+                <li><a class="menu__item" href="#">Les Moins Populaires</a></li>
+                    <div class="social">
+                        <li> <a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><p class="copyright">© Copyright</p></li>
+                    </ul>
+        <!-- LOGO DU SITE -->
+        <img class="logo" src="img/logo.svg" alt="">
+        <!-- BOUTTON THEME -->
+          <input type="checkbox" class="checkbox" id="checkbox"> 
+            <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class='fas fa-sun'></i>
+                <div class='ball'></div>
+            </label> 
+    </header>
+    <!-- 1 SECTION AVEC LES 3 LOGOS LES PLUS POPULAIRES -->
+    <section class="section1">
+        <div class="card1">
+            <p class="tendances">
+                Tendances
+            </p>
+            <ul>                
+                <li><a href="#"><img src="img/python.svg" alt="logo python"></li></a>
+                <li><a href="#"><img src="img/js.svg" alt="logo Javascript"></li></a>
+                <li><a href="#"><img src="img/c.svg" alt="Logo C++"></li></a>
+            </ul>
+        </div>
+    </section>
+    <!-- 2EME SECTION == 1 GRAPHIQUE  -->
+    <section class="section2">
+        <div class="card2">
+            <p>representation générale sur plusieurs années :</p>
+    
+            <div class="canvas1">
+                <canvas id="mychart"></canvas>
+            </div>
+        </div>            
+    </section>
+    <!-- 3EME SECTION == DEUXIEME GRAPHIQUE EN DONUTS -->
+    <section class="section3">
+        <div class="card3">
+            <p>Pourcentage des recherches  sur le web :</p>
+            <div class="canvas2">
+                <canvas id="secondchart"></canvas>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+<script src="script.js"></script>
+</html>
