@@ -333,4 +333,7 @@ echo $html->find('p', 4)->plaintext;
 <?php
 
 echo $html->find('a[class="image"]', 1);
+
+
+
 ?>

@@ -1,7 +1,7 @@
 <?php 
 require './vendor/autoload.php';
 $router = new AltoRouter();
-$router->setBasePath('Projet_data/');
+$router->setBasePath('Projet_data/alto_router/');
 
 $router->map('GET', '/', 'test');
 $router->map('GET', '/langage/[*:langage]', 'langages/langage'); // langages = nom du dossier et langage = nom du fichier

@@ -5,9 +5,9 @@
 //   })
 // Chart.defaults.global.title.display = true;
 // Chart.defaults.global.title.text = "hello";
-
+console.log("arrete de faire des test dans la console laury et bouge toi le cul");
 let chart = document.getElementById("mychart");
-// console.log(chart);
+console.log(chart);
 let linechart = new Chart(chart, {
     type: 'line',
     data: {
@@ -19,14 +19,14 @@ let linechart = new Chart(chart, {
                     lineTension: 0.1,
                     backgroundColor: "rgba(253, 216, 60, 1)",
                     borderColor: "rgba(253, 216, 60, 1)",
-                    pointBorderColor: "#fff",
+                    pointBorderColor: "#fff",                    
                     pointBackgroundColor: "rgba(253, 216, 60, 1)",
                     pointBorderWidth: 1,
                     pointHoverRadius: 5,
                     pointHitRadius: 5,
                     data: [65, 59, 10, 81, 56, 55, 40, 50],
-                    
-                },
+                  },
+
                 {
                     label: "C++",
                     fill: false,
@@ -55,13 +55,20 @@ let linechart = new Chart(chart, {
                  }
 
             ]},
-            options: {
+    options:{
+        plugins: {
+            legend: {
+                display: false,
+                 labels:{
+                    UsePointStyle: true,
                 title:{
-                    text: "salut"
+                    display: true,
+                }
                 }
             }
-            
-    });
+        }
+    }     
+    })
 
 
     // DEUXIEME GRAPHIQUE == DONUT
@@ -70,7 +77,7 @@ let linechart = new Chart(chart, {
     let linechart1 = new Chart(chart1, {
         type: 'doughnut',
         data: {
-            labels: [
+            labels: [   
                 'PHP',
                 'JS',
                 'C++',
@@ -92,8 +99,22 @@ let linechart = new Chart(chart, {
     ],
     hoverOffset: 6
   }]
+    },
+    options:{
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels:{
+                    UsePointStyle: true,
+                }
+            }
         }
-    })
+    }
+})
+
+
+
 
 
              // TEST !!!!!!!!!!!
