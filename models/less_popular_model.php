@@ -1,6 +1,13 @@
 <?php
 
-//requête pour récupérer tous les pourcentages par rapport aux dates et aux langages les + populaires
+//requête pour récupérer tous les pourcentages par rapport aux dates et aux langages les - populaires
+// langage.idLangage = 2 = Go
+// langage.idLangage = 5 = Julia
+// langage.idLangage = 6 = Kotlin
+// langage.idLangage = 10 = Rust
+// langage.idLangage = 11 = Swift
+// langage.idLangage = 12 = Typescript
+
 require('../_config/db.php');
 
 $req_pop_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos
@@ -20,5 +27,5 @@ $req_pop_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentag
 $req_pop_lang->execute();
 $pop_lang = $req_pop_lang->fetchAll(PDO::FETCH_NUM);
 
-
+print_r($pop_lang);
 ?>

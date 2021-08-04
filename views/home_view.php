@@ -6,7 +6,7 @@
 
 
 
-
+<div class="test"></div>
 
 
 
@@ -16,5 +16,5 @@
 
 
 <?php
-  include "views/includes/footer.php"  
+  include "includes/footer.php"  
 ?>
