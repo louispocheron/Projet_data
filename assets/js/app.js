@@ -1,4 +1,6 @@
-//////////////////////////////////////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : LIGNE
+//////////////////////////////////////////////////////////////////PAGE LESS POPULAR
+
+///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : LIGNE
 
 let chart = document.getElementById("lineChart_less");
 let linechart = new Chart(chart, {
@@ -39,7 +41,7 @@ let linechart = new Chart(chart, {
     }     
     })
 
-//////////////////////////////////////////////////////////////// GRAPH AJAX LESS POPULAR : LIGNE
+///////////////////////////////// GRAPH AJAX LESS POPULAR : LIGNE
 document.querySelectorAll('.button_logo').forEach(button => {
     button.addEventListener('click', function(e){
 
@@ -104,7 +106,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
     });
 });
 
-//////////////////////////////////////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : POLAR
+///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : POLAR
 
 let chart_2 = document.getElementById("polarChart");
 let polarChart = new Chart(chart_2, {
@@ -122,7 +124,7 @@ let polarChart = new Chart(chart_2, {
     },
 });
 
-//////////////////////////////////////////////////////////////// GRAPH AJAX LESS POPULAR : POLAR
+///////////////////////////////// GRAPH AJAX LESS POPULAR : POLAR
 document.querySelectorAll('.button_logo').forEach(button => {
     button.addEventListener('click', function(e){
 
@@ -163,7 +165,16 @@ document.querySelectorAll('.button_logo').forEach(button => {
     });
 });
 
-// CHANGEMENT DESCRIPTION LANGAGES
+///////////////////////////////// CHANGEMENT DESCRIPTION LANGAGES
+
+//tous les scraps sont "display: none" au début sauf "julia"
+document.querySelector('.scrapGo').style.display = "none";
+document.querySelector('.scrapRust').style.display = "none";
+document.querySelector('.scrapSwift').style.display = "none";
+document.querySelector('.scrapTypescript').style.display = "none";
+document.querySelector('.scrapKotlin').style.display = "none";
+
+
 document.querySelector('.Julia').addEventListener('click', function(){
 
     document.querySelector('.scrapJulia').style.display = "block";

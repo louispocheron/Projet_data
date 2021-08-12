@@ -198,3 +198,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+/*****************************************************************PAGE LESS_POPULAR */
+
+/* taille logos */
+.less_logo {
+    width: 7%;
+}
