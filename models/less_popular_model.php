@@ -1,31 +1,45 @@
 <?php
 
-//requête pour récupérer tous les pourcentages par rapport aux dates et aux langages les - populaires
-// langage.idLangage = 2 = Go
-// langage.idLangage = 5 = Julia
-// langage.idLangage = 6 = Kotlin
-// langage.idLangage = 10 = Rust
-// langage.idLangage = 11 = Swift
-// langage.idLangage = 12 = Typescript
-
 require('../_config/db.php');
 
-$req_pop_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos
-                               FROM table_generale
-                               JOIN dates
-                               ON table_generale.dates_idDates =  dates.idDates
-                               JOIN pourcentages
-                               ON table_generale.pourcentages_idPourcentages = pourcentages.idPourcentages
-                               JOIN langages
-                               ON table_generale.langages_idLangages = langages.idLangages
-                               WHERE table_generale.langages_idLangages = 2 OR table_generale.langages_idLangages = 5 
-                               OR table_generale.langages_idLangages = 6 
-                               OR table_generale.langages_idLangages = 10 OR table_generale.langages_idLangages = 11 
-                               OR table_generale.langages_idLangages = 12");
+//requête pour récupérer le langage + le nom pour afficher dans cards
+// $req_logos = $bdd->prepare("SELECT * FROM langages");
+// $req_logos->execute();
+// $logos = $req_logos->fetchAll(PDO::FETCH_NUM);
+//logos[0] = id
+//logos[1] = langage
+//logos[2] = url img
 
 
-$req_pop_lang->execute();
-$pop_lang = $req_pop_lang->fetchAll(PDO::FETCH_NUM);
+//REQUETES POUR GRAPH CHART.JS
+function getInfosLess($imgValue, $bdd){
+    $req_less_lang = $bdd->prepare("SELECT idtable_generale, dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos
+                                   FROM table_generale
+                                   JOIN dates
+                                   ON table_generale.dates_idDates =  dates.idDates
+                                   JOIN pourcentages
+                                   ON table_generale.pourcentages_idPourcentages = pourcentages.idPourcentages
+                                   JOIN langages
+                                   ON table_generale.langages_idLangages = langages.idLangages
+                                   WHERE table_generale.langages_idLangages ='".$imgValue."'");
 
-print_r($pop_lang);
+
+    $req_less_lang->execute();
+    $less_lang = $req_less_lang->fetchAll(PDO::FETCH_NUM);
+
+    $annee = [];
+    $pourcentage = [];
+    $lang = $less_lang[0][2];
+
+    for($i=0; $i < count($less_lang); $i++){
+        array_push($annee, $less_lang[$i][1]);
+        array_push($pourcentage, $less_lang[$i][3]);
+    }
+
+    $all = [$lang, $annee, $pourcentage];
+
+    return $all;
+
+}
+
 ?>
