@@ -1,9 +1,184 @@
+//////////////////////////////////////////////////////////////////PAGE HOME
+
+///////////////////////////////// GRAPH PRINCIPAL HOME : DOUGHNUT
+
+var ctx = document.getElementById("chartDoughnut");
+var doughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [   
+            'c++',
+            'Java',
+            'Javascript',        
+            'Perl',                
+            'PHP',
+            'Python',
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            // hoverBackgroundColor:'#e0e0e0',
+            data: [6.61, 17.72, 8.30, 0.4, 6.15, 29.9],
+            backgroundColor: [
+                'rgba(131, 128, 246, 1)',
+                'rgba(236, 206, 98, 1)',
+                'rgba(142, 84, 236, 1)',
+                'rgba(243, 109, 157, 1)',
+                'rgba(130, 221, 139, 1)',
+                'rgba(161, 220, 255, 1)'
+            ],
+            hoverOffset: 6
+        }]
+    },
+    options:{
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels:{
+                    UsePointStyle: true,
+                }
+            }
+        }
+    }
+});
+
+//----------------------------- GRAPH AJAX HOME :DOUGHNUT
+
+let idDate = 18;
+// Ajax au clique btn "moins" idDate
+document.querySelector('.moins').addEventListener('click', function(e){
+    document.querySelector('.plus').style.display = "block";
+    idDate = idDate - 1;
+    if(idDate == 1){
+        document.querySelector('.moins').style.display = "none";
+    } else if(idDate > 1){
+        document.querySelector('.moins').style.display = "block";
+    }
+    console.log(idDate);
+    //stop envoie formulaire
+    e.preventDefault();
+    //supp ancien canvas et en recrée un
+    $('#chartDoughnut').remove();
+    $('.canvas2').append('<canvas id="chartDoughnut"><canvas>');
+
+    let chartDoughnutHome = document.getElementById("chartDoughnut");
+        
+        $.ajax({
+            type: 'POST',
+            url: '../controllers/home_controller.php',
+            dataType: "json",
+            data: {
+            value: idDate
+            },
+            success: function (success) {
+                document.querySelector('.annee').textContent = success[1];
+                let doughnutChart = new Chart(chartDoughnutHome, {
+                    type: 'doughnut',
+                    data: {
+                        labels: success[0],
+                        datasets: [{
+                            label: 'My First Dataset',
+                            // hoverBackgroundColor:'#e0e0e0',
+                            data: success[2],
+                            backgroundColor: [
+                                'rgba(131, 128, 246, 1)',
+                                'rgba(236, 206, 98, 1)',
+                                'rgba(142, 84, 236, 1)',
+                                'rgba(243, 109, 157, 1)',
+                                'rgba(130, 221, 139, 1)',
+                                'rgba(161, 220, 255, 1)'
+                            ],
+                            hoverOffset: 6
+                        }]
+                    },
+                    options:{
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'bottom',
+                                labels:{
+                                    UsePointStyle: true,
+                                }
+                            }   
+                        }
+                    }
+                })
+            }
+        });
+    });
+
+// Ajax au clique btn "plus" idDate
+
+document.querySelector('.plus').style.display = "none";
+
+document.querySelector('.plus').addEventListener('click', function(e){
+
+    idDate = idDate + 1;
+    if(idDate == 18){
+        document.querySelector('.plus').style.display = "none";
+        document.querySelector('.moins').style.display = "block";
+    } else {
+        document.querySelector('.moins').style.display = "block";
+    }
+    console.log(idDate);
+    //stop envoie formulaire
+    e.preventDefault();
+    //supp ancien canvas et en recrée un
+    $('#chartDoughnut').remove();
+    $('.canvas2').append('<canvas id="chartDoughnut"><canvas>');
+
+    let chartDoughnutHome = document.getElementById("chartDoughnut");
+        
+    $.ajax({
+        type: 'POST',
+        url: '../controllers/home_controller.php',
+        dataType: "json",
+        data: {
+        value: idDate
+        },
+        success: function (success) {
+            document.querySelector('.annee').textContent = success[1];
+            let doughnutChart = new Chart(chartDoughnutHome, {
+                type: 'doughnut',
+                data: {
+                    labels: success[0],
+                    datasets: [{
+                        label: 'My First Dataset',
+                        // hoverBackgroundColor:'#e0e0e0',
+                        data: success[2],
+                        backgroundColor: [
+                            'rgba(131, 128, 246, 1)',
+                            'rgba(236, 206, 98, 1)',
+                            'rgba(142, 84, 236, 1)',
+                            'rgba(243, 109, 157, 1)',
+                            'rgba(130, 221, 139, 1)',
+                            'rgba(161, 220, 255, 1)'
+                        ],
+                        hoverOffset: 6
+                    }]
+                },
+                options:{
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels:{
+                                UsePointStyle: true,
+                            }
+                        }
+                    }
+                }
+            })
+        }
+    });
+});
+
 //////////////////////////////////////////////////////////////////PAGE LESS POPULAR
 
-///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : LIGNE
+//----------------------------- GRAPH PRINCIPAL LESS POPULAR : LIGNE
 
-let chart = document.getElementById("lineChart_less");
-let linechart = new Chart(chart, {
+let chartLessLine = document.getElementById("lineChart_less");
+let linechart = new Chart(chartLessLine, {
     type: 'line',
     data: {
             labels: ["2004","2005","2006", "2007","2008","2009", "2010","2011","2012", "2013","2014","2015", "2016", "2017","2018","2019", "2020", "2021"],
@@ -39,9 +214,9 @@ let linechart = new Chart(chart, {
             }
         }
     }     
-    })
+});
 
-///////////////////////////////// GRAPH AJAX LESS POPULAR : LIGNE
+//----------------------------- GRAPH AJAX LESS POPULAR : LIGNE
 document.querySelectorAll('.button_logo').forEach(button => {
     button.addEventListener('click', function(e){
 
@@ -52,7 +227,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
         $('.chartBox').append('<canvas id="lineChart_less"><canvas>');
         $('.chartBox').append('<canvas id="polarChart"><canvas>');
 
-        var chart = document.getElementById("lineChart_less");
+        var chartLessLine = document.getElementById("lineChart_less");
         
         //récupère 'value' button
         var val = $(this).val();
@@ -65,7 +240,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
             },
             success: function (success) {
 
-                let linechart = new Chart(chart, {
+                let linechart = new Chart(chartLessLine, {
                 type: 'line',
                 data: {
                     labels: success[1],
@@ -106,10 +281,10 @@ document.querySelectorAll('.button_logo').forEach(button => {
     });
 });
 
-///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : POLAR
+//----------------------------- GRAPH PRINCIPAL LESS POPULAR : POLAR
 
-let chart_2 = document.getElementById("polarChart");
-let polarChart = new Chart(chart_2, {
+let chartLessPolar = document.getElementById("polarChart");
+let polarChart = new Chart(chartLessPolar, {
     type: 'polarArea',
     data: {
         labels: ["C++","Java","Javascript","Perl","PHP","Python", "Julia"],
@@ -124,7 +299,7 @@ let polarChart = new Chart(chart_2, {
     },
 });
 
-///////////////////////////////// GRAPH AJAX LESS POPULAR : POLAR
+//----------------------------- GRAPH AJAX LESS POPULAR : POLAR
 document.querySelectorAll('.button_logo').forEach(button => {
     button.addEventListener('click', function(e){
 
@@ -133,7 +308,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
         //supp ancien canvas
         $('#polarChart').remove();
  
-        var chart_2 = document.getElementById("polarChart");
+        var chartLessPolar = document.getElementById("polarChart");
         
         //récupère 'value' button
         var val = $(this).val();
@@ -146,7 +321,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
             },
             success: function (success) {
 
-                let polarChart = new Chart(chart_2, {
+                let polarChart = new Chart(chartLessPolar, {
                     type: 'polarArea',
                     data: {
                         labels: ["C++","Java","Javascript","Perl","PHP","Python", success[0]],
@@ -165,7 +340,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
     });
 });
 
-///////////////////////////////// CHANGEMENT DESCRIPTION LANGAGES
+//----------------------------- CHANGEMENT DESCRIPTION LANGAGES
 
 //tous les scraps sont "display: none" au début sauf "julia"
 document.querySelector('.scrapGo').style.display = "none";

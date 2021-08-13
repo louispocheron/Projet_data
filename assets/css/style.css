@@ -199,9 +199,16 @@ justify-content: center;
 align-items: center;
 }
 
-/*****************************************************************PAGE LESS_POPULAR */
+/************************************************ PAGE LESS_POPULAR */
 
 /* taille logos */
 .less_logo {
     width: 7%;
+}
+
+/************************************************ PAGE HOME */
+
+/* taille chart doughnut */
+.canvas2{
+    width: 30%;
 }
