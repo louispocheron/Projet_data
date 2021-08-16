@@ -61,6 +61,7 @@ let linechart = new Chart(chart, {
                 display: false,
                  labels:{
                     UsePointStyle: true,
+                    
                 title:{
                     display: true,
                 }
@@ -107,6 +108,7 @@ let linechart = new Chart(chart, {
                 position: 'bottom',
                 labels:{
                     UsePointStyle: true,
+                    // color: "rgb(255,0,0)",
                 }
             }
         }
