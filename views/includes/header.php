@@ -8,7 +8,7 @@
   <!-- Fontawesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- Favicon -->
   <!-- <link rel="icon" type="image/png" href="assets/images/pop-corn.png" /> -->
   <!-- ChartJS -->
@@ -36,7 +36,7 @@
                         <li><p class="copyright">© Copyright</p></li>
                     </ul>
         <!-- LOGO DU SITE -->
-        <img class="logo" src="../assets/img/logo.svg" alt="">
+        <img class="logo" src="assets/img/logo.svg" alt="">
         <!-- BOUTTON THEME -->
           <input type="checkbox" class="checkbox" id="checkbox"> 
             <label for="checkbox" class="label">

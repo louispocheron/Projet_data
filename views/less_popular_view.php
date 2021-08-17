@@ -1,27 +1,27 @@
 <?php
 include "includes/header.php";
-include "../assets/scrap/simple_html_dom.php";
+include "assets/scrap/simple_html_dom.php";
 ?>
 
 <!-- BOUTONS DIFFÉRENTS LANGAGES -->
 <form method="post" class="section_less_logos">
     <button class="button_logo Julia" value ="5">
-        <img class="less_logo" src="../assets/img/Julia.png">
+        <img class="less_logo" src="assets/img/Julia.png">
     </button>
     <button class="button_logo Go" value ="2">
-        <img class="less_logo" src="../assets/img/Go.png">
+        <img class="less_logo" src="assets/img/Go.png">
     </button>
     <button class="button_logo Rust" value ="10">
-        <img class="less_logo" src="../assets/img/Rust.png">
+        <img class="less_logo" src="assets/img/Rust.png">
     </button>
     <button class="button_logo Kotlin" value ="6">
-        <img class="less_logo" src="../assets/img/Kotlin.png">
+        <img class="less_logo" src="assets/img/Kotlin.png">
     </button>
     <button class="button_logo Swift" value ="11">
-        <img class="less_logo" src="../assets/img/Swift.png">
+        <img class="less_logo" src="assets/img/Swift.png">
     </button>
     <button class="button_logo Typescript" value ="12">
-        <img class="less_logo" src="../assets/img/TypeScript.png">
+        <img class="less_logo" src="assets/img/TypeScript.png">
     </button>
 
 <!-- SCRAP DESCRIPTION LANGAGE -->
@@ -116,8 +116,8 @@ echo $html->find('p', 4)->plaintext;
 
 <!-- GRAPH CHART.JS -->
 <div class="chartBox">
-        <canvas id="lineChart_less"></canvas>
-        <canvas id="polarChart"><canvas>
+    <canvas id="lineChart_less"></canvas>
+    <canvas id="polarChart"></canvas>
 </div>
 
 <?php
