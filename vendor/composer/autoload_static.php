@@ -4,50 +4,8 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749
+class ComposerStaticInitd286f9897dccfd7e04bccdbb23b39efa
 {
-    public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Twig\\' => 5,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Ctype\\' => 23,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Twig\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/twig/twig/src',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'T' => 
-        array (
-            'Twig_' => 
-            array (
-                0 => __DIR__ . '/..' . '/twig/twig/lib',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -56,10 +14,7 @@ class ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit46ef3e23e8d193de8ecc178d09fb4749::$classMap;
+            $loader->classMap = ComposerStaticInitd286f9897dccfd7e04bccdbb23b39efa::$classMap;
 
         }, null, ClassLoader::class);
     }
