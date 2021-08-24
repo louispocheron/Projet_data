@@ -1,7 +1,77 @@
 //////////////////////////////////////////////////////////////////PAGE HOME
+                            // HOME GRAPH LINE
+// console.log("arrete de faire des test dans la console laury et bouge toi le cul");
+let chart1 = document.getElementById("charthomeline");
+if(chart1){
+let linechart = new Chart(chart1, {
+    type: 'line',
+    data: {
+            labels: ["2001", "2004", "2007", "2010", "2013", "2016", "2017", "2020"],
+            datasets: [
+                {
+                    label: "JS",
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(253, 216, 60, 1)",
+                    borderColor: "rgba(253, 216, 60, 1)",
+                    pointBorderColor: "#fff",                    
+                    pointBackgroundColor: "rgba(253, 216, 60, 1)",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHitRadius: 5,
+                    data: [65, 59, 10, 81, 56, 55, 40, 50],
+                  },
+
+                {
+                    label: "C++",
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(131, 128, 246, 1)",
+                    borderColor: "rgba(131, 128, 246, 1)",
+                    pointBorderColor: "#fff",
+                    pointBackgroundColor: "rgba(131, 128, 246, 1)",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHitRadius: 5,
+                    data: [60, 20, 40, 40, 35, 32, 70, 90],
+                    borderWidth: 3.5,
+                },
+                 {label: "PYTHON",
+                    fill: false,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(161, 220, 255, 1)",
+                    borderColor: "rgba(161, 220, 255, 1)",
+                    pointBorderColor: "#fff",
+                    pointBackgroundColor: "rgba(161, 220, 255, 1)",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHitRadius: 5,
+                    data: [80, 20, 90, 76, 32, 21, 54, 74],
+                 }
+
+            ]},
+    options:{
+        plugins: {
+            legend: {
+                display: false,
+                 labels:{
+                    UsePointStyle: true,
+                    
+                title:{
+                    display: true,
+                }
+                }
+            }
+        }
+    }     
+    })
+}
+
+
 ///////////////////////////////// GRAPH PRINCIPAL HOME : DOUGHNUT
 
 var ctx = document.getElementById("chartDoughnut");
+if(ctx){
 var doughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -40,6 +110,7 @@ var doughnutChart = new Chart(ctx, {
         }
     }
 });
+}
 
 //----------------------------- GRAPH AJAX HOME :DOUGHNUT
 
@@ -60,7 +131,7 @@ moins.addEventListener('click', function(e){
     e.preventDefault();
     //supp ancien canvas et en recrée un
     $('#chartDoughnut').remove();
-    $('.canvas2').append('<canvas id="chartDoughnut"><canvas>');
+    $('.card3').append('<canvas id="chartDoughnut"><canvas>');
 
     let chartDoughnutHome = document.getElementById("chartDoughnut");
         
@@ -128,7 +199,7 @@ document.querySelector('.plus').addEventListener('click', function(e){
     e.preventDefault();
     //supp ancien canvas et en recrée un
     $('#chartDoughnut').remove();
-    $('.canvas2').append('<canvas id="chartDoughnut"><canvas>');
+    $('.card3').append('<canvas id="chartDoughnut"><canvas>');
 
     let chartDoughnutHome = document.getElementById("chartDoughnut");
         
@@ -184,7 +255,7 @@ document.querySelector('.plus').addEventListener('click', function(e){
 
 ///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : LIGNE
 let chart = document.getElementById("lineChart_less");
-let linechart = new Chart(chart, {
+let linechart1 = new Chart(chart, {
     type: 'line',
     data: {
             labels: ["2004","2005","2006", "2007","2008","2009", "2010","2011","2012", "2013","2014","2015", "2016", "2017","2018","2019", "2020", "2021"],
@@ -296,8 +367,9 @@ document.querySelectorAll('.button_logo').forEach(button => {
 
 ///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : POLAR
 
-let chart_2 = document.getElementById("polarChart").getContext('2d');
-chart_2.fillRect(10, 10, 300, 300);
+let chart_2 = document.getElementById("polarChart");
+if(chart_2){
+// chart_2.fillRect(10, 10, 300, 300);
 let polarChart = new Chart(chart_2, {
     type: 'polarArea',
     data: {
@@ -322,7 +394,7 @@ let polarChart = new Chart(chart_2, {
             responsive: false,
         }
     });
-
+}
 
 ///////////////////////////////// GRAPH AJAX LESS POPULAR : POLAR
 document.querySelectorAll('.button_logo').forEach(button => {
@@ -373,6 +445,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
         });
     });
 });
+
 
 ///////////////////////////////// CHANGEMENT DESCRIPTION LANGAGES
 
@@ -450,3 +523,4 @@ document.querySelector('.Kotlin').addEventListener('click', function(){
     document.querySelector('.scrapTypescript').style.display = "none";
 
 });
+

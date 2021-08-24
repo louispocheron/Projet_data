@@ -1,7 +1,7 @@
 <?php 
 require './vendor/autoload.php';
 $router = new AltoRouter();
-$router->setBasePath('test_laury/');
+$router->setBasePath('Projet_data/');
 
 $router->map('GET', '/less_popular', function(){
       require 'controllers/less_popular_controller.php';
@@ -16,7 +16,7 @@ $router->map('GET', '/popular', function(){
 });
 
 $router->map('GET', '/[*]', function(){
-      require 'view/404_view.php';
+      require 'views/404.php';
 });
 
 
@@ -26,6 +26,6 @@ if (is_callable($match['target'])){
 call_user_func($match['target']);
 }
 else{
-  require '404.php';
+  require 'views/404.php';
 }
 }
