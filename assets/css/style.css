@@ -1,0 +1,157 @@
+
+.section1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card1{
+display: flex;
+flex-direction: column;
+padding: 2rem;
+margin-top: -5rem;
+height: 30vh;
+width: 70vw;
+background-color: rgba(255, 255, 255, 0.33);
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+word-break: break-all;
+/* margin-right: 0; */
+}
+.card1.dark{
+  box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+}
+.card2.dark{
+   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.card3.dark{
+   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+/* .card1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    grid-template-areas:
+      "tendance tendance tendance"
+      "python js c++"
+  }
+  .python{
+    grid-area: ; */
+  
+.tendances{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.card1 ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left: -7.5rem;     */
+}
+.card1 ul li{
+    width: 100%;
+    margin-top: 2rem; 
+    /* padding-top: 2rem 0px 0px 5px; */
+}
+.card1 ul li img{
+max-width: auto;
+padding: 0.5rem;
+}
+/* MEDIA QUERY HEADER ET 1ERE SECTION  */
+
+.section2{
+     height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: red; */
+}
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 70vw;    
+    background-color: rgba(255, 255, 255, 0.33);
+    padding: 2rem;
+    margin: 1rem;
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+
+}
+.card2 p{
+    padding-bottom: 1rem;
+    font-size: 1.5;
+    font-weight: 400;
+}
+.canvas1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115%;
+}
+.section3{
+     height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.card3{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 70vw;    
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-top: 2rem; 
+    padding: 2rem;
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+}
+.chartBoxhome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+}
+.canvas2{
+        width: 100%;
+    }

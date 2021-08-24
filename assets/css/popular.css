@@ -1,0 +1,129 @@
+.section1{
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card1{
+height: 30vh;
+width: 70vw;
+margin-top: -8.5rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 2rem;
+background-color: rgba(255, 255, 255, 0.33);
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+word-break: break-all;
+}
+.card1.dark{
+  box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.card1 img{
+width: 50%;
+}
+.card1 p{
+    align-items: flex-start;
+}
+
+.card2.dark{
+   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.card3.dark{
+   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
+background-color: rgba(255, 255, 255, 0.1);
+/* background-color: red; */
+backdrop-filter: blur( 20.0px );
+-webkit-backdrop-filter: blur( 20.0px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.tendances{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+/* MEDIA QUERY HEADER ET 1ERE SECTION  */
+
+.section2{
+     height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: red; */
+}
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 70vw;    
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: -5rem;
+    padding: 2rem;
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+
+}
+.card2 p{
+    padding-bottom: 1rem;
+    font-size: 1.5;
+    font-weight: 400;
+}
+.canvas1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115%;
+}
+.section3{
+     height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.card3{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 70vw;    
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-top: 2rem; 
+    padding: 2rem;
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+}
+.canvas2{
+        width: 100%;
+    }

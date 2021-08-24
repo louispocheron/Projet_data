@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style404.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style404.css">
     <title>Document</title>
 </head>
 <body>
 
     <div class="div_img">
-        <img src="../assets/img/404.png">
+        <img src="assets/img/404.png">
     </div>
 
     <div class="div_button">
