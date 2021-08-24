@@ -1,8 +1,5 @@
 <?php
 
-
-
-require('../_config/db.php');
-
+require('_config/db.php');
 
 ?>

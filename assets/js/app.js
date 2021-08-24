@@ -2,6 +2,7 @@
 ///////////////////////////////// GRAPH PRINCIPAL HOME : DOUGHNUT
 
 var ctx = document.getElementById("chartDoughnut");
+if(ctx){
 var doughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -40,7 +41,7 @@ var doughnutChart = new Chart(ctx, {
         }
     }
 });
-
+}
 //----------------------------- GRAPH AJAX HOME :DOUGHNUT
 
 let idDate = 18;
@@ -72,6 +73,7 @@ moins.addEventListener('click', function(e){
             value: idDate
             },
             success: function (success) {
+                console.log(success);
                 document.querySelector('.annee').textContent = success[1];
                 let doughnutChart = new Chart(chartDoughnutHome, {
                     type: 'doughnut',
@@ -237,7 +239,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
         $('.chartlesspolar').append('<canvas id="polarChart"><canvas>');
 
         var chart = document.getElementById("lineChart_less");
-        
+
         //récupère 'value' button
         var val = $(this).val();
         $.ajax({
@@ -296,6 +298,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
 
 ///////////////////////////////// GRAPH PRINCIPAL LESS POPULAR : POLAR
 
+if(document.getElementById("polarChart")){
 let chart_2 = document.getElementById("polarChart").getContext('2d');
 chart_2.fillRect(10, 10, 300, 300);
 let polarChart = new Chart(chart_2, {
@@ -322,7 +325,7 @@ let polarChart = new Chart(chart_2, {
             responsive: false,
         }
     });
-
+}
 
 ///////////////////////////////// GRAPH AJAX LESS POPULAR : POLAR
 document.querySelectorAll('.button_logo').forEach(button => {
@@ -377,6 +380,7 @@ document.querySelectorAll('.button_logo').forEach(button => {
 ///////////////////////////////// CHANGEMENT DESCRIPTION LANGAGES
 
 //tous les scraps sont "display: none" au début sauf "julia"
+if(document.querySelector('.scrapGo')){
 document.querySelector('.scrapGo').style.display = "none";
 document.querySelector('.scrapRust').style.display = "none";
 document.querySelector('.scrapSwift').style.display = "none";
@@ -450,3 +454,41 @@ document.querySelector('.Kotlin').addEventListener('click', function(){
     document.querySelector('.scrapTypescript').style.display = "none";
 
 });
+}
+
+// $(window).on('load', function(){
+
+// $.ajax({
+//             type: 'POST',
+//             url: 'controllers/less_popular_controller.php',
+//             dataType: "json",
+//             // data: 5,
+//             success: function (success) {
+// console.log(success);
+//                 // let polarChart = new Chart(chart_2, {
+//                 //     type: 'polarArea',
+//                 //     data: {
+//                 //         labels: ["C++","Java","Javascript","Perl","PHP","Python", success[0]],
+//                 //         datasets: [
+//                 //             {
+//                 //                 label: "Comparaison avec les langages les plus populaires en 2021",
+//                 //                 backgroundColor: [
+//                 // 'rgb(255, 99, 132)',
+//                 // 'rgb(75, 192, 192)',
+//                 // 'rgb(255, 205, 86)',
+//                 // 'rgb(201, 203, 207)',
+//                 // 'rgb(54, 162, 235)',
+//                 // 'rgb(255, 136, 0)'
+//                 // ],
+//                 //                 data: [6.61, 17.72, 8.30, 0.4, 6.15, 29.9, success[2][17]],
+//                 //             },
+//                 //         ]
+//                 //     },
+//                 //     options:{
+//                 //         responsive: false,
+//                 //     }
+//                 // });
+//             }
+//         });
+//     });
+

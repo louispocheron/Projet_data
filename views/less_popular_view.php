@@ -62,10 +62,8 @@ include "assets/scrap/simple_html_dom.php";
                 </p>
                 <p>
                     <?php
-                    // echo $html->find('p', 1)->plaintext;
                     echo $html->find('p', 2)->plaintext;
                     echo $html->find('p', 3)->plaintext;
-                    // echo $html->find('p', 4)->plaintext;
                     ?>
                 </p>
             </div>
@@ -80,8 +78,6 @@ include "assets/scrap/simple_html_dom.php";
                     <?php
                     echo $html->find('p', 1)->plaintext;
                     echo $html->find('p', 2)->plaintext;
-                    // echo $html->find('p', 3)->plaintext;
-                    // echo $html->find('p', 4)->plaintext;
                     ?>
                 </p>
             </div>
@@ -97,7 +93,6 @@ include "assets/scrap/simple_html_dom.php";
                     echo $html->find('p', 1)->plaintext;
                     echo $html->find('p', 2)->plaintext;
                     echo $html->find('p', 3)->plaintext;
-                    // echo $html->find('p', 4)->plaintext;
                     ?>
                 </p>
             </div>
@@ -113,7 +108,6 @@ include "assets/scrap/simple_html_dom.php";
                     echo $html->find('p', 1)->plaintext;
                     echo $html->find('p', 2)->plaintext;
                     echo $html->find('p', 3)->plaintext;
-                    // echo $html->find('p', 4)->plaintext;
                     ?>
                 </p>
             </div>

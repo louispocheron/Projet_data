@@ -1,7 +1,8 @@
 <?php 
 require './vendor/autoload.php';
+
 $router = new AltoRouter();
-$router->setBasePath('test_laury/');
+$router->setBasePath('Projet_data/');
 
 $router->map('GET', '/less_popular', function(){
       require 'controllers/less_popular_controller.php';
