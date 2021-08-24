@@ -135,7 +135,7 @@ document.querySelector('.plus').addEventListener('click', function(e){
         
     $.ajax({
         type: 'POST',
-        url: 'controllers/home_controller.php',
+        url: 'controllers/home_ajax_controller.php',
         dataType: "json",
         data: {
         value: idDate

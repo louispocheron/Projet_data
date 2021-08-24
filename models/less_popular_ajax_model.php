@@ -36,7 +36,7 @@ function getInfosLess($imgValue, $bdd){
 
     $all = [$lang, $annee, $pourcentage];
 
-    return $all;
+    return JSON_encode($all);
 
 }
 
