@@ -2,7 +2,7 @@
 
 require('_config/db.php');
 
-    $req_less_lang = $bdd->prepare("SELECT idtable_generale, dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos, langages.scrap, langages.imagelang
+    $req_less_lang = $bdd->prepare("SELECT langages.idLangages, dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos, langages.scrap
                                    FROM table_generale
                                    JOIN dates
                                    ON table_generale.dates_idDates =  dates.idDates
@@ -15,5 +15,6 @@ require('_config/db.php');
 
     $req_less_lang->execute();
     $pop_lang = $req_less_lang->fetch(PDO::FETCH_NUM);
+    
 
 ?>

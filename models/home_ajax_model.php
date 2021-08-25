@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-=======
->>>>>>> 03d696ed01fb0b749ea9f195607a6e44eb4e3247
 $req = "SELECT idtable_generale, dates.dates_col, langages.noms, pourcentages.pourcentages_col
                                    FROM table_generale
                                    JOIN dates

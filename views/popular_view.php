@@ -5,7 +5,10 @@
 
 
 
-<link rel="stylesheet" href="assets/css/popular.css">   
+<link rel="stylesheet" href="assets/css/popular.css">
+
+<button class="testpop" value="<?php echo $pop_lang[0]?>">opjpojpo</button>
+
     <section class="section1">
         <div class="card1">
             <p class="tendances">

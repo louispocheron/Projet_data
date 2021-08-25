@@ -1,6 +1,8 @@
 <?php
-$id = $_GET['langage'];
-require('../models/popular_model.php');
+require('../models/popular_ajax_model.php');
 
-require('../views/popular_view.php');
+
+echo getFilmByYear($_POST['value'], $bdd);
+
+
 ?>

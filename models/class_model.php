@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 <?php
 
-=======
-
-<?php
->>>>>>> 03d696ed01fb0b749ea9f195607a6e44eb4e3247
 class Model{
 
     public $req;

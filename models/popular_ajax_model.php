@@ -1,8 +1,9 @@
 <?php
 
-require('_config/db.php');
+require('../_config/db.php');
 
-    $req_less_lang = $bdd->prepare("SELECT idtable_generale, dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos, langages.scrap
+function getFilmByYear($id, $bdd){
+    $req_less_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col
                                    FROM table_generale
                                    JOIN dates
                                    ON table_generale.dates_idDates =  dates.idDates
@@ -14,6 +15,19 @@ require('_config/db.php');
 
 
     $req_less_lang->execute();
-    $pop_lang = $req_less_lang->fetch(PDO::FETCH_NUM);
+    $pop_lang = $req_less_lang->fetchAll(PDO::FETCH_NUM);
+    
+    $annee = [];
+    $pourcentage = [];
+    $lang = $pop_lang[0][1];
 
+    for($i=0; $i < count($pop_lang); $i++){
+        array_push($annee, $pop_lang[$i][0]);
+        array_push($pourcentage, $pop_lang[$i][2]);
+    }
+
+    $all = [$lang, $annee, $pourcentage];
+
+    return JSON_encode($all);
+}
 ?>
