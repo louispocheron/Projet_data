@@ -1,11 +1,13 @@
 $(document).ready(function(){
-
+var val = $('.btn_pop').val();
 
 $.ajax({
             type: 'GET',
             url: 'controllers/popular_ajax_controller.php',
             dataType: "json",
-            // data: 5,
+            data: {
+            value: val
+            },
             success: function (success) {
 console.log(success);
                 // let polarChart = new Chart(chart_2, {

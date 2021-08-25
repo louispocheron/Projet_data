@@ -1,6 +1,6 @@
 <?php
 
-require('_config/db.php');
+require('../_config/db.php');
 
     $req_less_lang = $bdd->prepare("SELECT idtable_generale, dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.logos, langages.scrap
                                    FROM table_generale

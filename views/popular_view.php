@@ -5,13 +5,14 @@
 
 
 
-<link rel="stylesheet" href="assets/css/popular.css">   
+<link rel="stylesheet" href="assets/css/popular.css">
+<button class="btn_pop" value="<?php echo $pop_lang[0];?>">efzef</button>  
     <section class="section1">
         <div class="card1">
             <p class="tendances">
-                <?php echo $pop_lang[2]?>
+                <?php echo $pop_lang[2];?>
             </p>
-            <img src="<?php echo $pop_lang[4] ?>" alt="">           
+            <img src="<?php echo $pop_lang[4];?>" alt="">           
             <p>  
                     <?php
                     $html = file_get_html("".$pop_lang[5]."");

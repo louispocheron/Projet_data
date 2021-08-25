@@ -24,7 +24,7 @@
                 Tendances :
             </p>
             <ul>                
-                <li> <a href="popular?langage=9"><img class="python" src="assets/img/python.svg" alt="logo python"></a></li>
+                <li><a href="popular?langage=9"><img class="python" src="assets/img/python.svg" alt="logo python"></a></li>
                 <li><a href="popular?langage=4"><img src="assets/img/js.svg" alt="logo Javascript"></a></li>
                 <li><a href="popular?langage=1"><img src="assets/img/c.svg" alt="Logo C++"></a>  </li>
             </ul>

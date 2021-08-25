@@ -79,7 +79,7 @@ function file_get_html(
 		$use_include_path,
 		$context,
 		$offset,
-		$maxLen
+		$maxLen,
 	);
 	// $contents = retrieve_url_contents($url);
 

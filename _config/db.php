@@ -1,7 +1,7 @@
 <?php
 $dsn = 'mysql:host=localhost;dbname=data_projet;charset=utf8';
-$username = 'louis';
-$password = 'Galardo39-';
+$username = 'laury';
+$password = 'quarto.l';
 
 try
 {

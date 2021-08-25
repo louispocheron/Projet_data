@@ -15,7 +15,7 @@ background-color: rgba(0, 40, 251, 0.06);
 
 }
 body{
-/* height: 180vh; */
+height: 100%;
 transition: background-color 0.6s ease, color 1s ease;
 color: #000;
 }
@@ -312,50 +312,46 @@ margin: 5px;
     header{
         display: none;
     }
+
     .section1{
-        height: 100vh;
+        height: 100%;
         display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 50% 50%;
-        /* row-gap: 5%; */
-        /* flex-direction: row;
-        justify-content: space-around;
-        align-items: center; */
+        grid-template-columns: 1% 20% 79%;
+        grid-template-rows: 2% 48% 48% 2%;
     }
+
     .card1{
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-column: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
         justify-self: center;
         width: 90%;
         height: 90%;
         margin-top: 4.5rem;
     }
-    /* .card1 button{
-        width: auto;
-        height: 20%;
-    } */
 
     .desktop{
-        grid-column: 1;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        width: 80%;
-        height: 90%;
-        margin-top: 5px;
-        background-color: rgba(79, 98, 194, 0.8);
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      justify-self: center;
-    }
-    .chartBox{
-        padding: 2rem;
         grid-column: 2;
         grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-end: 4;
+        min-width: 50%;
+        height: 100%;
+        margin-top: 5px;
+        background-color: rgba(79, 98, 194, 0.8);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        justify-self: center;
+    }
+
+    .chartBox{
+        padding: 2rem;
+        grid-column: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
         height: auto;
         width: 90%;
         flex-direction: row;      
@@ -386,8 +382,11 @@ margin: 5px;
     .langage1 img{
         width: 25%;
     }
-    .menu__item:hover {
-        width: 50%;
-}
+    
+    .menu__item {
+        padding-bottom: 1.4rem;
+        padding-top: 1.4rem;
+    }
+    
     
 }
