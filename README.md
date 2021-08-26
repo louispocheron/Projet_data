@@ -2,9 +2,10 @@
 Projet pour l'ACS (projet en cours)
 
 ## Description  
-Consignes du projet : 
 
 Réaliser un site en utilisant des OpenData:
+Consignes du projet : 
+
 * MVC
 * POO
 * Twig
