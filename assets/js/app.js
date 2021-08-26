@@ -546,12 +546,12 @@ $(window).on('load', function(){
                             datasets: [
                                 {
                                     label: success[0],
-                                    fill: false,
+                                    fill: true,
                                     lineTension: 0.1,
-                                    backgroundColor: "rgba(253, 216, 60, 1)",
-                                    borderColor: "rgba(253, 216, 60, 1)",
-                                    pointBorderColor: "#fff",                    
-                                    pointBackgroundColor: "rgba(253, 216, 60, 1)",
+                                    backgroundColor: success[3],
+                                    borderColor:  '#fff',
+                                    pointBorderColor: '#fff',                    
+                                    pointBackgroundColor: success[3],
                                     pointBorderWidth: 1,
                                     pointHoverRadius: 5,
                                     pointHitRadius: 5,
@@ -559,9 +559,10 @@ $(window).on('load', function(){
                                 },
                             ]},
                         options:{
+                            responsive: false,
                             plugins: {
                                 legend: {
-                                    display: false,
+                                    display: true,
                                     labels:{
                                         UsePointStyle: true,
                                         title:{

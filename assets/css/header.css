@@ -21,7 +21,6 @@ body.dark{
   color: #fff;
 }
 
-
 header{
     height: 25vh;
     width: 100vw;
@@ -30,6 +29,11 @@ header{
     flex-direction: row;
     justify-content: center;
     transition: background 0.2s linear;
+}
+img.logo{
+  position: fixed;
+  top: 20px;
+  right: 80px;
 }
 ul li button{
   border: none;
@@ -145,7 +149,8 @@ box-shadow: inset 5px 5px 10px #344180,
 }
 
 .label {
-  top: 38px;
+  top: 34px;
+  left: 130px;
   width: 30px;
   height: 8px;
   background-color:rgba(64, 79, 157, 1);
