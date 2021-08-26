@@ -2,8 +2,8 @@
 
 require('../_config/db.php');
 
-function getFilmByYear($id, $bdd){
-    $req_less_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col
+function getData($id, $bdd){
+    $req_less_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.couleur
                                    FROM table_generale
                                    JOIN dates
                                    ON table_generale.dates_idDates =  dates.idDates
@@ -20,13 +20,14 @@ function getFilmByYear($id, $bdd){
     $annee = [];
     $pourcentage = [];
     $lang = $pop_lang[0][1];
+    $color = $pop_lang[0][3];
 
     for($i=0; $i < count($pop_lang); $i++){
         array_push($annee, $pop_lang[$i][0]);
         array_push($pourcentage, $pop_lang[$i][2]);
     }
 
-    $all = [$lang, $annee, $pourcentage];
+    $all = [$lang, $annee, $pourcentage, $color];
 
     return JSON_encode($all);
 }

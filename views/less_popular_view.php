@@ -8,8 +8,8 @@ include "assets/scrap/simple_html_dom.php";
 <!-- BOUTONS DIFFÉRENTS LANGAGES -->
 <link rel="stylesheet" href="assets/css/less.css">
 <section class="section1">
-    <div class="desktop">
-        <img  class="logodesk" src="assets/img/logo.svg" alt="logo du site">
+<div class="desktop">
+        <a href="home"><img  class="logodesk" src="assets/img/logo.svg" alt="logo du site"></a>
             <ul>
                 <li><a class="menu__item" href="popular?langage=8">PHP</a></li>
                 <li><a class="menu__item" href="popular?langage=4">JS</a></li>
@@ -24,7 +24,7 @@ include "assets/scrap/simple_html_dom.php";
                     <li><p class="copyright">© Copyright</p></li>
                 </div>
             </ul>
-     </div>           
+     </div>          
     <!-- <div class="desktoptest"> -->
         <div class="card1">
             <h1>Les Moins Populaires</h1>

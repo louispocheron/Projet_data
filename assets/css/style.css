@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 .desktop {
     display: none;
 }
@@ -169,13 +173,14 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
     align-items: center;
 }
 
+
 /* RESPONSIVE DESKTOP */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
     body{
-        height: 100vh;
-        
+        height: 100%; 
     }
+
     header{
         display: none;
     }
@@ -240,8 +245,9 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
     }
 
     .label{
-        top: 18px;
-        right: 20px;
+        position: fixed;
+        top: 3%;
+        left: 95%;
     }
 
     #chartDoughnut{
@@ -287,5 +293,9 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
     }
     .langage1 img{
         width: 25%;
+    }
+
+    .canvas1 {
+        width: 90%;
     }
 }
