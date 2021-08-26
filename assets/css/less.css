@@ -304,10 +304,9 @@ margin: 5px;
     width: auto;
     /* margin-left: -2rem; */
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
     body{
         height: 100vh;
-        
     }
     header{
         display: none;
@@ -342,6 +341,7 @@ margin: 5px;
         grid-row-end: 3;
         width: 80%;
         height: 90%;
+        padding: 1rem;
         margin-top: 5px;
         background-color: rgba(79, 98, 194, 0.8);
       border-radius: 20px;
@@ -350,6 +350,7 @@ margin: 5px;
       align-items: center;
       flex-direction: column;
       justify-self: center;
+      /* display: inline-block; */
     }
     .chartBox{
         padding: 2rem;

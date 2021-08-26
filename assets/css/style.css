@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.desktop {
+    display: none;
+}
+
+.btn_dark {
+    display: none;
+}
 
 .section1{
     height: 100%;
@@ -20,50 +32,34 @@ backdrop-filter: blur( 20.0px );
 -webkit-backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 word-break: break-all;
-/* margin-right: 0; */
 }
 .card1.dark{
   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
 background-color: rgba(255, 255, 255, 0.1);
-/* background-color: red; */
 backdrop-filter: blur( 20.0px );
 -webkit-backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-
 }
+
 .card2.dark{
    box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
 background-color: rgba(255, 255, 255, 0.1);
-/* background-color: red; */
 backdrop-filter: blur( 20.0px );
 -webkit-backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
 .card3.dark{
    box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
 background-color: rgba(255, 255, 255, 0.1);
-/* background-color: red; */
 backdrop-filter: blur( 20.0px );
 -webkit-backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-
 }
-/* .card1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    
-    grid-template-areas:
-      "tendance tendance tendance"
-      "python js c++"
-  }
-  .python{
-    grid-area: ; */
-  
+
 .tendances{
     font-size: 1.5rem;
     font-weight: 400;
@@ -73,12 +69,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    /* margin-left: -7.5rem;     */
 }
 .card1 ul li{
-    width: 100%;
     margin-top: 2rem; 
-    /* padding-top: 2rem 0px 0px 5px; */
 }
 .card1 ul li img{
 max-width: auto;
@@ -130,20 +123,20 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
     /* background-color: red; */
 }
 .card3{
-  display: flex;
+    justify-self: center;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: auto;
     width: 70vw;    
     background-color: rgba(255, 255, 255, 0.33);
-    padding-top: 2rem; 
     padding: 2rem;
     backdrop-filter: blur( 20.0px );
     -webkit-backdrop-filter: blur( 20.0px );
     border-radius: 20px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
+    box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
 }
 .chartBoxhome{
     display: flex;
@@ -155,3 +148,146 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
 .canvas2{
         width: 100%;
     }
+    .moins{
+    padding: 0.5rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+.plus{
+    padding: 0.5rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+.btn_graph {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+/* RESPONSIVE DESKTOP */
+
+@media screen and (min-width: 1024.1px) {
+    body{
+        height: 100vh;
+        
+    }
+    header{
+        display: none;
+    }
+    .section1{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1% 20% 44% 35%;
+        grid-template-rows: 2% 48% 48% 2%;
+    }
+
+    .card1{
+        padding: 0;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-self: center;
+        align-self: flex-end;
+        width: 80%;
+        min-height: 69%;
+        padding: 2rem;
+    }
+    
+    .menu__item {
+        padding-bottom: 1.4rem;
+        padding-top: 1.4rem;
+    }
+    
+    .card2{ 
+        /* padding: 1rem; */
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: flex-start;
+        width: 80%;
+        min-height: 77%;
+        padding: 2rem;
+    }
+    /* .card2 canvas{
+        width: 0%;
+    } */
+
+    .card3 {
+        padding: 0;
+        width: 90%;
+        height: 93%;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        align-self: flex-end;
+        /* margin-bottom: 0.5rem; */
+    }
+
+    .btn_dark {
+        display: block;
+        justify-self: flex-end;
+        align-self: flex-start;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        position: initial;
+    }
+
+    .label{
+        top: 18px;
+        right: 20px;
+    }
+
+    #chartDoughnut{
+        display:none;
+    }
+
+
+    .desktop{
+        grid-column: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+        min-width: 50%;
+        background-color: rgba(79, 98, 194, 0.8);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        justify-self: center;
+    }
+
+    .chartlessline{
+        width: 50%;
+        height: 15rem;
+        margin-top: 4rem;
+        /* height: 50%; */
+    }
+    .chartlessline canvas{
+        width: 100%;
+    }
+    .chartlesspolar{
+       width: 50%;
+       height: 19rem;
+       margin-top: 3rem;
+       padding: 0;
+    } 
+    .chartlesspolar canvas{
+        width: 60%;
+    }
+    .scrapitem{
+        overflow: hidden;
+    }
+    .langage1 img{
+        width: 25%;
+    }
+}

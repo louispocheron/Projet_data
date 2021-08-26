@@ -1,6 +1,9 @@
-<?php
-$id = $_GET['langage'];
-require('../models/popular_model.php');
 
-require('../views/popular_view.php');
+<?php
+require('../models/popular_ajax_model.php');
+
+
+echo getDataLang($_POST['value'], $bdd);
+
+
 ?>

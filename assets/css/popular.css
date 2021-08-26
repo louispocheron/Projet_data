@@ -1,18 +1,19 @@
 .section1{
-    height: 35vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .card1{
-height: 30vh;
+height: 47vh;
 width: 70vw;
-margin-top: -8.5rem;
-display: flex;
-flex-direction: column;
+/* margin-top: -8.5rem; */
+display: block;
 justify-content: center;
 padding: 2rem;
+margin-top: -4rem;
 background-color: rgba(255, 255, 255, 0.33);
 box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
 backdrop-filter: blur( 20.0px );
@@ -20,6 +21,7 @@ backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 word-break: break-all;
 }
+
 .card1.dark{
   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
 background-color: rgba(255, 255, 255, 0.1);
@@ -29,11 +31,16 @@ backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.card1 img{
-width: 50%;
+
+
+button{
+    display: none;
 }
-.card1 p{
-    align-items: flex-start;
+
+.restimg{
+float: left;
+width: 30%;
+padding: 0 8px 0 0;
 }
 
 .card2.dark{
@@ -45,33 +52,13 @@ backdrop-filter: blur( 20.0px );
 border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.card3.dark{
-   box-shadow: 11px 10px 10px -3px rgba(0,0,0,0.30);
-background-color: rgba(255, 255, 255, 0.1);
-/* background-color: red; */
-backdrop-filter: blur( 20.0px );
--webkit-backdrop-filter: blur( 20.0px );
-border-radius: 20px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-}
 
 .tendances{
     font-size: 1.5rem;
-    font-weight: 400;
-}
-
-
-
-/* MEDIA QUERY HEADER ET 1ERE SECTION  */
-
-.section2{
-     height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* background-color: red; */
+    font-weight: 600;
+    text-align: start;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
 }
 .card2{
     display: flex;
@@ -81,8 +68,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     height: auto;
     width: 70vw;    
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: -5rem;
     padding: 2rem;
+    margin: 1rem;
     backdrop-filter: blur( 20.0px );
     -webkit-backdrop-filter: blur( 20.0px );
     border-radius: 20px;
@@ -127,3 +114,98 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
 .canvas2{
         width: 100%;
     }
+.desktop{
+    display: none;
+}
+.java{
+    float: left;
+    width: 30%;
+    padding: 0 8px 0 0;
+}
+
+@media screen and (min-width: 1025px) {
+    body{
+        height: 100vh;
+    }
+    header{
+        display: none;
+    }
+    .section1{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1% 20% 78% 1%;
+        grid-template-rows: 2% 51% 45% 2%;
+    }
+        .desktop{
+        grid-column: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+        min-width: 50%;
+        background-color: rgba(79, 98, 194, 0.8);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-self: flex-end;
+        justify-self: center;
+    }
+    .restimg{
+        height: 200px;
+        width: 200px;
+    }
+    .card1 img{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .tendances{
+        font-size: 1.5rem;
+        align-items: center;
+    }
+    .java{
+        height: 60%;
+        width: 20%;
+    }
+        .card1{
+        padding: 0;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-self: center;
+        align-self: flex-end;
+        width: 80%;
+        height: 70%;
+        font-size: 1.2rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-rows: 25% 75%;
+        align-self: flex-end;
+        justify-self: center;
+        margin-bottom: 2rem;
+    }
+    .scraptext{
+        /* align-self: center; */
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    .canvas1{
+        width: 60%;
+    }
+        .card2{ 
+        /* padding: 1rem; */
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: flex-start;
+        width: 80%;
+        padding: 2rem;
+        align-self: center;
+        justify-self: center;
+    }
+    
+}

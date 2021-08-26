@@ -9,21 +9,24 @@ include "assets/scrap/simple_html_dom.php";
 <link rel="stylesheet" href="assets/css/less.css">
 <section class="section1">
     <div class="desktop">
-        <img  class="logodesk" src="assets/img/logo.svg" alt="logo du site">
+        
+                <a href="home"><img  class="logodesk" src="assets/img/logo.svg" alt="logo du site"></a>
             <ul>
-                <li><a class="menu__item" href="popular?langage=8">PHP</a></li>
-                <li><a class="menu__item" href="popular?langage=4">JS</a></li>
-                <li><a class="menu__item" href="popular?langage=1">C/C++</a></li>
-                <li><a class="menu__item" href="popular?langage=3">JAVA</a></li>
-                <li><a class="menu__item" href="popular?langage=7">PERL</a></li>       
-                <li><a class="menu__item" href="popular?langage=9">PYTHON</a></li>             
-                <li><a class="menu__item" href="less_popular">Les Moins Populaires</a></li>
+            <li><a class="menu__item" href="popular?langage=8">PHP</a></li>
+            <li><a class="menu__item" href="popular?langage=4">JS</a></li>
+            <li><a class="menu__item" href="popular?langage=1">C/C++</a></li>
+            <li><a class="menu__item" href="popular?langage=3">JAVA</a></li>
+            <li><a class="menu__item" href="popular?langage=7">PERL</a></li>       
+            <li><a class="menu__item" href="popular?langage=9">PYTHON</a></li>             
+             <li><a class="menu__item" href="less_popular">Les Moins Populaires</a></li>
                 <div class="social">
                     <li> <a href="#"><i class="fab fa-github"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><p class="copyright">© Copyright</p></li>
+                    <li><p class="copyright">© Copyright</p></li>                
+            
                 </div>
             </ul>
+
      </div>           
     <!-- <div class="desktoptest"> -->
         <div class="card1">

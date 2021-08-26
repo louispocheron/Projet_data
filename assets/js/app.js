@@ -51,9 +51,10 @@ let linechart = new Chart(chart1, {
 
             ]},
     options:{
+        responsive: false,
         plugins: {
             legend: {
-                display: false,
+                display: true,
                  labels:{
                     UsePointStyle: true,
                     
@@ -447,7 +448,9 @@ document.querySelectorAll('.button_logo').forEach(button => {
 });
 
 
+
 ///////////////////////////////// CHANGEMENT DESCRIPTION LANGAGES
+if(document.querySelector('.scrapGo')){
 
 //tous les scraps sont "display: none" au début sauf "julia"
 document.querySelector('.scrapGo').style.display = "none";
@@ -523,4 +526,58 @@ document.querySelector('.Kotlin').addEventListener('click', function(){
     document.querySelector('.scrapTypescript').style.display = "none";
 
 });
+}
+
+
+$(window).on('load', function(){
+    let val = $('.testpop').val();
+    $.ajax({
+            type: 'POST',
+            url: 'controllers/popular_ajax_controller.php',
+            dataType: "json",
+            data: {
+            value: val
+            },
+            success: function (success) {
+                console.log(success);
+                let chartPop = document.getElementById("chartpopline");
+                if(chartPop){
+                    let linechart = new Chart(chartPop, {
+                        type: 'line',
+                        data: {
+                            labels: success[1],
+                            datasets: [
+                                {
+                                    label: success[0],
+                                    fill: true,
+                                    lineTension: 0.1,
+                                    backgroundColor: success[3],
+                                    borderColor: "#fff",
+                                    pointBorderColor: "#fff",                    
+                                    pointBackgroundColor: success[3],
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 5,
+                                    pointHitRadius: 5,
+                                    data: success[2],
+                                },
+                            ]},
+                        options:{
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                    labels:{
+                                        UsePointStyle: false,
+                                        title:{
+                                            display: true,
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }     
+                    })
+                }
+            }
+        });
+    });
 
