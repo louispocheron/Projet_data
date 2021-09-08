@@ -135,6 +135,11 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
 .desktop{
     display: none;
 }
+
+.btn_dark {
+    display: none;
+}
+
     @media screen and (min-width: 1025px) {
         body{
             height: 100vh;
@@ -147,7 +152,7 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
             height: 100%;
             display: grid;
             grid-template-columns: 1% 20% 78% 1%;
-            grid-template-rows: 5% 45% 45% 5%;
+            grid-template-rows: 2% 48% 48% 2%;
             }
 
         .card1{
@@ -218,5 +223,10 @@ box-shadow:  5px 5px 30px 1px rgba(0,0,0,0.15);
         grid-row: 2;
         position: initial;
     }
-        
+    
+    .label{
+        position: fixed;
+        top: 3%;
+        left: 95%;
+    }
 }

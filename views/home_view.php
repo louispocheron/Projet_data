@@ -40,6 +40,7 @@
                 </div>
             </div>            
     <!-- 3EME SECTION == DEUXIEME GRAPHIQUE EN DONUTS -->
+            <!-- btn darkmode -->
             <div class="btn_dark">
                 <input type="checkbox" class="checkbox" id="checkbox"> 
                 <label for="checkbox" class="label">

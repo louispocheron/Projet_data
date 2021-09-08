@@ -15,21 +15,21 @@ try {
  
 //------------------------------------------------------------------DATES
 
-// (B) READ UPLOADED CSV
-// $fh = fopen("csv_projet_data.csv", "r");
-// if ($fh === false) { exit("Failed to open uploaded CSV file"); }
+(B) READ UPLOADED CSV
+$fh = fopen("csv_projet_data.csv", "r");
+if ($fh === false) { exit("Failed to open uploaded CSV file"); }
  
-// // (C) IMPORT ROW BY ROW
-// while (($row = fgetcsv($fh,1000,",")) !== false) {
+// (C) IMPORT ROW BY ROW
+while (($row = fgetcsv($fh,1000,",")) !== false) {
 
-//   try {
+  try {
    
-//     $stmt = $pdo->prepare("INSERT INTO `dates` (`dates_col`) VALUES (?)");
-//     $stmt->execute([$row[0]]);
-//   } catch (Exception $ex) { echo $ex->getmessage(); }
-// }
-// fclose($fh);
-// echo "DONE.";
+    $stmt = $pdo->prepare("INSERT INTO `dates` (`dates_col`) VALUES (?)");
+    $stmt->execute([$row[0]]);
+  } catch (Exception $ex) { echo $ex->getmessage(); }
+}
+fclose($fh);
+echo "DONE.";
 
 //------------------------------------------------LANGAGES
 

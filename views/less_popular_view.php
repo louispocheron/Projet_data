@@ -24,8 +24,16 @@ include "assets/scrap/simple_html_dom.php";
                     <li><p class="copyright">© Copyright</p></li>
                 </div>
             </ul>
-     </div>          
-    <!-- <div class="desktoptest"> -->
+        </div>        
+        <!-- btn darkmode -->
+        <div class="btn_dark">
+                <input type="checkbox" class="checkbox" id="checkbox"> 
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'></div>
+                </label> 
+            </div>
         <div class="card1">
             <h1>Les Moins Populaires</h1>
             <div class="langage1">
