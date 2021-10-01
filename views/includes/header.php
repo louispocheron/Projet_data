@@ -10,7 +10,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/header.css">
   <!-- Favicon -->
-  <!-- <link rel="icon" type="image/png" href="assets/images/pop-corn.png" /> -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <!-- ChartJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
   <title>LangagesDashboard</title>
