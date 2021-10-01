@@ -32,8 +32,8 @@ header{
 }
 img.logo{
   position: fixed;
-  top: 20px;
-  right: 108px;
+  top: 3%;
+  right: 23%;
 }
 ul li button{
   border: none;
@@ -149,8 +149,9 @@ box-shadow: inset 5px 5px 10px #344180,
 }
 
 .label {
-  top: 34px;
-  left: 145px;
+  position: sticky;
+  top: 5%;
+  left: 81%;
   width: 30px;
   height: 8px;
   background-color:rgba(64, 79, 157, 1);
@@ -159,7 +160,6 @@ box-shadow: inset 5px 5px 10px #344180,
   justify-content: space-between;
   padding: 5px;
   /* margin-left: 10rem; */
-  position: relative;
   transform: scale(1.5);
   z-index: 2;
 }
@@ -205,4 +205,10 @@ box-shadow: inset 5px 5px 10px #344180,
   transition-duration: .25s;
 }
 
+
+  .checkbox {
+    opacity: 0;
+    position: relative;
+  }
+  
  }

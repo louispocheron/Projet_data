@@ -28,6 +28,17 @@
             </ul>
      </div>
         
+<<<<<<< HEAD
+=======
+     <div class="btn_dark">
+        <input type="checkbox" class="checkbox" id="checkbox"> 
+        <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class='fas fa-sun'></i>
+            <div class='ball'></div>
+        </label> 
+    </div>
+>>>>>>> 5bc3c8f855b5f58f171172cfac3267dd57847ec0
         <div class="card1">
             <p class="tendances">
                 <?php echo $pop_lang[2]?> :

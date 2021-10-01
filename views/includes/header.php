@@ -41,7 +41,7 @@
 
         <!-- LOGO DU SITE -->
         <a href="home"><img class="logo" src="assets/img/logo.svg" alt=""></a>
-        <!-- BOUTTON THEME -->
+        <!-- BOUTON THEME -->
           <input type="checkbox" class="checkbox" id="checkbox"> 
             <label for="checkbox" class="label">
                 <i class="fas fa-moon"></i>

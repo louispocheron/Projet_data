@@ -2,7 +2,7 @@
 
 require('../_config/db.php');
 
-function getFilmByYear($id, $bdd){
+function getData($id, $bdd){
     $req_less_lang = $bdd->prepare("SELECT dates.dates_col, langages.noms, pourcentages.pourcentages_col, langages.couleur
                                    FROM table_generale
                                    JOIN dates

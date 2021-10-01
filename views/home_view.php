@@ -34,19 +34,20 @@
     <!-- 2EME SECTION == 1 GRAPHIQUE  -->
         
             <div class="card2">
-                <p>representation générale sur plusieurs années :</p>
+                <p>représentation générale sur plusieurs années :</p>
                 <div class="canvas1">
                     <canvas id="charthomeline"></canvas>
                 </div>
             </div>            
     <!-- 3EME SECTION == DEUXIEME GRAPHIQUE EN DONUTS -->
-    <div class="btn_dark">
-            <input type="checkbox" class="checkbox" id="checkbox"> 
-            <label for="checkbox" class="label">
-                <i class="fas fa-moon"></i>
-                <i class='fas fa-sun'></i>
-                <div class='ball'></div>
-            </label> 
+            <!-- btn darkmode -->
+            <div class="btn_dark">
+                <input type="checkbox" class="checkbox" id="checkbox"> 
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'></div>
+                </label> 
             </div>
             <div class="card3">
                 <p class="btn_graph"><button class="moins"><</button><span class="annee"> 2021 </span><button class="plus">></button></p>

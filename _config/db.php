@@ -1,4 +1,7 @@
 <?php
+// $dsn = 'mysql:host=localhost;dbname=louisp_data;charset=utf8';
+// $username = 'louisp';
+// $password = '5XfF2L1XyxDgig==';
 $dsn = 'mysql:host=localhost;dbname=data_projet;charset=utf8';
 $username = 'laury';
 $password = 'quarto.l';

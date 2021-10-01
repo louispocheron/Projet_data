@@ -21,8 +21,7 @@ $all = [$lang, $annee, $pourcentage];
 
 echo JSON_encode($all);
 
-}
-else{
+} else {
     echo 'Erreur';
 }
 

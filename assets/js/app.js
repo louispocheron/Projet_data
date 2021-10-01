@@ -51,7 +51,7 @@ let linechart = new Chart(chart1, {
 
             ]},
     options:{
-        responsive: false,
+        // responsive: false,
         plugins: {
             legend: {
                 display: false,
@@ -559,7 +559,11 @@ $(window).on('load', function(){
                                 },
                             ]},
                         options:{
+<<<<<<< HEAD
                             responsive: false,
+=======
+                            // responsive: false,
+>>>>>>> 5bc3c8f855b5f58f171172cfac3267dd57847ec0
                             plugins: {
                                 legend: {
                                     display: true,
